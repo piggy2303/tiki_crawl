@@ -2,7 +2,7 @@ from pymongo import MongoClient
 from bson.json_util import loads, dumps
 import json
 
-myclient = MongoClient("mongodb://localhost:27017/")
+myclient = MongoClient("mongodb://0.0.0.0:27017/")
 
 mydb = myclient["tiki"]
 

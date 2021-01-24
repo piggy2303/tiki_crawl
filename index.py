@@ -16,7 +16,7 @@ def get_list_item(cat_id):
         str(cat_id)+"&page="+str(page)+"&urlKey=dien-thoai-may-tinh-bang"
 
     headers = {
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36"
+        "User-Agent": "PostmanRuntime/7.26.8"
     }
     response = requests.get(url, headers=headers).json()
     print(len(response["data"]))
@@ -84,17 +84,17 @@ def get_list_rating(product_id):
             print(error)
 
 
-find_log = db_col_list_item().find({})
-for i in find_log:
-    product_id = i['id']
-    print(product_id)
-    get_list_rating(product_id)
+# find_log = db_col_list_item().find({})
+# for i in find_log:
+#     product_id = i['id']
+#     print(product_id)
+#     get_list_rating(product_id)
 
 
 # dien tu dien lanh
 # get_list_item(1789)
 # phu kien
-# get_list_item(1815)
+get_list_item(1815)
 # # laptop
-# get_list_item(1846)
-# get_list_item(4221)
+get_list_item(1846)
+get_list_item(4221)
